@@ -21,16 +21,40 @@
   function show(data) {
     console.log(data)
     let tab = 
-      `<tr>
-        <th>Name</th>
-      </tr>`
+      `<div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Name</h2>
+          </div>
+          <div class="col-lg-6">
+            <h2>Colors</h2>
+          </div>
+        </div>
+      </div>`
       
     for (let i of data.cards) {
-      tab += `<tr>
-                <td> ${i.name} </td>
-              </tr>`
+      tab += `
+              <p>${i.name}</p>
+              <p>${i.colors}</p>`
     }
     document.getElementById('message').innerHTML = tab
+  }
+  
+  input.addEventListener('input', onInput, false)
+  
+  function onInput(event) {
+    const searchString = event.target.value
+    console.log(searchString)
+    const data = getAssociatedData(searchString)
+    updateTable(data)
+  }
+  
+  function getAssociatedData(searchString) {
+    
+  }
+  
+  function updateTable(data) {
+    
   }
    
   
