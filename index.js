@@ -22,7 +22,7 @@
     console.log(data)
     let tab = 
       `<tr>
-        <th>id</th>
+        <th>Name</th>
       </tr>`
       
     for (let i of data.cards) {
